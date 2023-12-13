@@ -157,6 +157,17 @@ $('document').ready(function(){
 		$('#b55').animate({top:240, left: vw+50},500);
 		$('#b66').animate({top:240, left: vw+150},500);
 		$('#b77').animate({top:240, left: vw+250},500);
+		// Add event listener for play button
+    $("#play").click(function() {
+        $(".song")[0].play();  // Play the audio
+        $("video")[0].play();  // Play the video
+    });
+
+    // Add event listener for pausing both audio and video
+    $("#pause").click(function() {
+        $(".song")[0].pause();  // Pause the audio
+        $("video")[0].pause();  // Pause the video
+    });
 		$('.balloons').css('opacity','0.9');
 		$('.balloons h2').fadeIn(3000);
 		$(this).fadeOut('slow').delay(3000).promise().done(function(){
