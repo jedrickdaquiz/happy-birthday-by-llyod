@@ -165,8 +165,14 @@ $('document').ready(function(){
 	});
 
     $("#play").click(function() {
-        $(".song")[0].play();  // Play the audio
-        $("video")[0].play();  // Play the video
+        <div class="row video-section">
+    <div class="col-md-12 text-center">
+        <video controls width="100%">
+            <source src="download.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+	</div>
 	$(this).fadeOut('slow').delay(3000).promise().done(function(){
 	$('#story').fadeIn('slow');
 	});
